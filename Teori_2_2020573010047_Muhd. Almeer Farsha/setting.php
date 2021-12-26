@@ -1,12 +1,9 @@
 <?php
 require "proses/session.php";
 require "proses/koneksi.php";
-
 $sql = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$_SESSION[username]'");
 $data = mysqli_fetch_array($sql);
-
 ?>
-
 <!doctype html>
 <html lang="en">
 
@@ -41,7 +38,7 @@ $data = mysqli_fetch_array($sql);
             <!-- isi konten -->
             <div class="col-9">
                 <div class="card ms-1 mt-4">
-                    <h5 class="card-header">Profile</h5>
+                    <h5 class="card-header">Setting Profile</h5>
                     <div class="card-body">
                         <form action="proses/proses_password.php" method="POST">
                             <div class="mb-3">
@@ -88,10 +85,8 @@ $data = mysqli_fetch_array($sql);
             </div>
         </div>
     </div>
-
     <!-- Optional JavaScript -->
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebars.js"></script>
 </body>
-
 </html>
